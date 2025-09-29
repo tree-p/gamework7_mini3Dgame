@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfkts7b6px1l6"]
+
+[ext_resource type="PackedScene" uid="uid://dxw2jqopuysij" path="res://ASTHETIC Floor Tile 4x4 ONE SQ.glb" id="1_b16be"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fw7ar"]
+size = Vector3(0.32, 0.025, 0.32)
+
+[node name="Platform_Chess" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="ASTHETIC Floor Tile 4x4 ONE SQ" parent="StaticBody3D" instance=ExtResource("1_b16be")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12192, -0.0297475, 0.121553)
+shape = SubResource("BoxShape3D_fw7ar")
